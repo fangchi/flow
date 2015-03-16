@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="GBK" ?>
+<businesstemplet name="创建辅助安全域模板" status="true">
+	<steps>
+		<step stepid="1" name="判断卡片状态">
+			<from command="tath.012.001.01" description="tsm内部流程" code="$from$" />
+			<job description="判断卡片状态" code="isValidSE" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="卡片状态异常" status="0" step="0" />
+			<result description="卡片类型为SWP-SIM或eSE" status="1" step="2" />
+			<result description="卡片类型为T-Core" status="2" step="200" />
+		</step>
+		<!-- SWP-SIM&eSE -->
+		<step stepid="2" name="判断安全域状态">
+			<from command="tath.012.001.01" description="tsm内部流程" code="#tsm#" />
+			<job description="判断安全域状态" code="isValidSd" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="安全域状态异常" status="0" step="0" />
+			<result description="下一步（创建辅助安全域开始）" status="8" step="3" />
+			<result description="完成" status="2" step="6" />
+			<result description="安全域为主安全域" status="5" step="0" />
+			<result description="下一步（辅助安全域个人化）" status="7" step="11" />
+		</step>
+		<step stepid="3" name="选择辅助安全域">
+			<from command="tath.012.001.01" description="tsm内部流程" code="#tsm#" />
+			<job description="selectSsd" code="selectSsd_eSE_SIM" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="4" />
+		</step>
+		<step stepid="4" name="选择辅助安全域响应">
+			<from command="tath.012.001.01" description="tsm内部流程" code="$from$" />
+			<job description="selectSsdResponse" code="selectSsdResponse_eSE_SIM" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步(删除辅助安全域)" status="1" step="0" />
+			<result description="下一步(创建辅助安全域)" status="2" step="5" />
+		</step>
+		<step stepid="5" name="selectIsd命令">
+			<from command="tath.012.001.01" description="tsm内部流程" code="#tsm#" />
+			<job description="selectIsd_eSE_SIM" code="selectIsd_eSE_SIM" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="6" />
+		</step>
+		<step stepid="6" name="initupdate命令">
+			<from command="tath.012.001.01" description="tsm内部流程" code="#tsm#" />
+			<job description="InitializeUpdate" code="initializeUpdate" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="7" />
+		</step>
+		<step stepid="7" name="外部认证">
+			<from command="tath.012.001.01" description="tsm内部流程" code="$from$" />
+			<job description="externalAuthenticate" code="externalAuthenticate" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="8" />
+		</step>
+		<step stepid="8" name="外部认证响应">
+			<from command="tath.012.001.01" description="tsm内部流程" code="$from$" />
+			<job description="responseApdu" code="responseApdu" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="9" />
+		</step>
+		<!-- 创建辅助安全域 -->
+		<step stepid="9" name="创建辅助安全域">
+			<from command="tath.012.001.01" description="tsm内部流程" code="#tsm#" />
+			<job description="ssdCreate" code="ssdCreate_eSE_SIM" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="10" />
+		</step>
+		<step stepid="10" name="创建辅助安全域响应">
+			<from command="tath.012.001.01" description="tsm内部流程" code="$from$" />
+			<job description="ssdCreateResponse" code="ssdCreateResponse_eSE_SIM" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="11" />
+		</step>
+		<step stepid="11" name="选择辅助安全域">
+			<from command="tath.012.001.01" description="tsm内部流程" code="#tsm#" />
+			<job description="selectSsd" code="selectSsd_eSE_SIM" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="12" />
+		</step>
+		<step stepid="12" name="initupdate命令">
+			<from command="tath.012.001.01" description="tsm内部流程" code="#tsm#" />
+			<job description="InitializeUpdate" code="initializeUpdate" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="13" />
+		</step>
+		<step stepid="13" name="外部认证">
+			<from command="tath.012.001.01" description="tsm内部流程" code="$from$" />
+			<job description="externalAuthenticate" code="externalAuthenticate" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="14" />
+		</step>
+		<step stepid="14" name="外部认证响应">
+			<from command="tath.012.001.01" description="tsm内部流程" code="$from$" />
+			<job description="responseApdu" code="responseApdu" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="15" />
+		</step>
+		<step stepid="15" name="替换密钥">
+			<from command="tath.012.001.01" description="tsm内部流程" code="#tsm#" />
+			<job description="SsdPersonal" code="ssdPutKey_eSE_SIM" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="下一步" status="1" step="16" />
+		</step>
+		<step stepid="16" name="替换密钥响应">
+			<from command="tath.012.001.01" description="tsm内部流程" code="$from$" />
+			<job description="SsdPutKeyResponse" code="ssdPutKeyResponse_eSE_SIM" />
+			<to command="" description="不用向外发送消息" code="#tsm#" />
+			<result description="数据有误" status="0" step="0" />
+			<result description="完成" status="1" step="0" />
+		</step>
+	</steps>
+</businesstemplet>
