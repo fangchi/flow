@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE flow PUBLIC
+"-//flows.whty.flow.com.cn//DTD Config 1.0//EN"
+"http://whty.flow.com.cn/dtd/flows.dtd">
+
+<flow id="tath.005.001.03" name="应用下载子模板1">
+	<state id="start_state" name="判断卡片状态" handler="com.whty.flow.statehandler.StartStateHandler">
+	    <transition event="1" to="checkIfDownLoad"/>
+	    <transition event="2" to="getAppBaseInfo"/>
+	    <transition event="3" to="isValidSd"/>
+	</state>
+	<state id="checkIfDownLoad" name="判断应用是否下载" >
+	     <transition event="1" to="finish"/>
+	</state>
+	<state id="getAppBaseInfo" name="获取应用信息" handler="com.whty.flow.statehandler.GetAppBaseInfoHandler">
+	     <transition event="1" to="finish"/>
+	</state>
+	<state id="isValidSd" name="判断应用是否合法"  handler="com.whty.flow.statehandler.IsValidSdHandler">
+	     <transition event="1" to="getAppBaseInfo"/>
+	</state>
+	<state id="finish" name="结束">
+	</state>
+</flow>

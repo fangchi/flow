@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>flow</name>
-	<description>
+	<description> 
 		状态机框架,完成状态机基于个状态流转处理业务流程功能,基于github开源框架easyflow(http://datasymphony.com.au/open-source/easyflow)内核构建,新增子流程和挂起步骤，向项目开源者致敬
 	</description>
 	<inceptionYear>2015</inceptionYear>

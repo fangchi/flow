@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT flowtemplets (subflows*,flows+)>
+
+<!ELEMENT subflows (flow*)>
+
+<!ELEMENT flows (flow+)>
+
+<!ELEMENT flow EMPTY>
+<!ATTLIST flow
+src CDATA #REQUIRED
+>

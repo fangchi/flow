@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.502" errors="0" skipped="0" tests="1" name="com.whty.flow.spring.FlowSpringTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="java.vm.version" value="20.65-b04-466.1"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="mrj.build" value="11M4716"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/fangchi/work/source/java/flow/flow_builder"/>
+    <property name="java.runtime.version" value="1.6.0_65-b14-466.1-11M4716"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="basedir" value="/Users/fangchi/work/source/java/flow/flow_builder"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="surefire.real.class.path" value="/Users/fangchi/work/source/java/flow/flow_builder/target/surefire/surefirebooter5699962337715548487.jar"/>
+    <property name="java.io.tmpdir" value="/var/folders/v0/hk_7b8_14c5_1ts_ml6dt8tc0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.jnu.encoding" value="EUC_CN"/>
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="surefire.test.class.path" value="/Users/fangchi/work/source/java/flow/flow_builder/target/test-classes:/Users/fangchi/work/source/java/flow/flow_builder/target/classes:/Users/fangchi/work/source/java/flow/flow_core/target/classes:/Users/fangchi/work/software/m2/com/google/guava/guava/15.0/guava-15.0.jar:/Users/fangchi/work/software/m2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar:/Users/fangchi/work/software/m2/ch/qos/logback/logback-classic/1.0.1/logback-classic-1.0.1.jar:/Users/fangchi/work/software/m2/ch/qos/logback/logback-core/1.0.1/logback-core-1.0.1.jar:/Users/fangchi/work/software/m2/ch/qos/logback/logback-access/1.0.1/logback-access-1.0.1.jar:/Users/fangchi/work/software/m2/org/slf4j/jcl-over-slf4j/1.7.2/jcl-over-slf4j-1.7.2.jar:/Users/fangchi/work/software/m2/org/slf4j/jul-to-slf4j/1.7.2/jul-to-slf4j-1.7.2.jar:/Users/fangchi/work/software/m2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/fangchi/work/software/m2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar:/Users/fangchi/work/software/m2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/Users/fangchi/work/software/m2/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar:/Users/fangchi/work/software/m2/junit/junit/4.11/junit-4.11.jar:/Users/fangchi/work/software/m2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/fangchi/work/software/m2/org/springframework/spring-context/3.2.2.RELEASE/spring-context-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/org/springframework/spring-aop/3.2.2.RELEASE/spring-aop-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/fangchi/work/software/m2/org/springframework/spring-beans/3.2.2.RELEASE/spring-beans-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/org/springframework/spring-core/3.2.2.RELEASE/spring-core-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/fangchi/work/software/m2/org/springframework/spring-expression/3.2.2.RELEASE/spring-expression-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/org/springframework/spring-test/3.2.2.RELEASE/spring-test-3.2.2.RELEASE.jar:"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.10.2"/>
+    <property name="http.nonProxyHosts" value="local„ÄÅ169.254/16|*.local„ÄÅ169.254/16"/>
+    <property name="user.home" value="/Users/fangchi"/>
+    <property name="user.timezone" value="GMT+08:00"/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="fangchi"/>
+    <property name="java.class.path" value="/Users/fangchi/work/source/java/flow/flow_builder/target/test-classes:/Users/fangchi/work/source/java/flow/flow_builder/target/classes:/Users/fangchi/work/source/java/flow/flow_core/target/classes:/Users/fangchi/work/software/m2/com/google/guava/guava/15.0/guava-15.0.jar:/Users/fangchi/work/software/m2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar:/Users/fangchi/work/software/m2/ch/qos/logback/logback-classic/1.0.1/logback-classic-1.0.1.jar:/Users/fangchi/work/software/m2/ch/qos/logback/logback-core/1.0.1/logback-core-1.0.1.jar:/Users/fangchi/work/software/m2/ch/qos/logback/logback-access/1.0.1/logback-access-1.0.1.jar:/Users/fangchi/work/software/m2/org/slf4j/jcl-over-slf4j/1.7.2/jcl-over-slf4j-1.7.2.jar:/Users/fangchi/work/software/m2/org/slf4j/jul-to-slf4j/1.7.2/jul-to-slf4j-1.7.2.jar:/Users/fangchi/work/software/m2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/fangchi/work/software/m2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar:/Users/fangchi/work/software/m2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar:/Users/fangchi/work/software/m2/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar:/Users/fangchi/work/software/m2/junit/junit/4.11/junit-4.11.jar:/Users/fangchi/work/software/m2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/fangchi/work/software/m2/org/springframework/spring-context/3.2.2.RELEASE/spring-context-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/org/springframework/spring-aop/3.2.2.RELEASE/spring-aop-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/fangchi/work/software/m2/org/springframework/spring-beans/3.2.2.RELEASE/spring-beans-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/org/springframework/spring-core/3.2.2.RELEASE/spring-core-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/fangchi/work/software/m2/org/springframework/spring-expression/3.2.2.RELEASE/spring-expression-3.2.2.RELEASE.jar:/Users/fangchi/work/software/m2/org/springframework/spring-test/3.2.2.RELEASE/spring-test-3.2.2.RELEASE.jar:"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="/Users/fangchi/work/source/java/flow/flow_builder/target/surefire/surefirebooter5699962337715548487.jar /Users/fangchi/work/source/java/flow/flow_builder/target/surefire/surefire9075414049268135781tmp /Users/fangchi/work/source/java/flow/flow_builder/target/surefire/surefire6464506643915711181tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_65"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="localRepository" value="/Users/fangchi/work/software/m2"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="mrj.version" value="1070.1.6.0_65-466.1"/>
+    <property name="socksNonProxyHosts" value="local„ÄÅ169.254/16|*.local„ÄÅ169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local„ÄÅ169.254/16|*.local„ÄÅ169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.492" classname="com.whty.flow.spring.FlowSpringTest" name="testIntegrateSpring"/>
+</testsuite>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE flow PUBLIC
+"-//flows.whty.flow.com.cn//DTD Config 1.0//EN"
+"http://whty.flow.com.cn/dtd/flows.dtd">
+
+<flow id="tath.008.001.01" name="应用个人化模板">
+	<state id="1" name="判断卡片状态" handler="com.whty.flow.statehandler.PerStartStateHandler">
+		<param name="job" value="isValidSE" />
+		<transition event="0" description="卡片状态异常" to="finish" />
+		<transition event="2" description="卡片类型为T-Core" to="2" />
+	</state>
+	<!-- SWP-SIM&eSE -->
+	<state id="2" name="获取应用数据" handler="com.whty.flow.statehandler.GetAppBaseInfoHandler">
+		<param name="job" value="getAppBaseInfo"  />
+		<transition event="0" description="应用状态异常" to="finish" />
+		<transition event="1" description="下一步" to="3" />
+	</state>
+	<!-- 个人化 -->
+	<state id="3" name="selectIsd命令" handler="com.whty.flow.statehandler.PersonalizeHandler">
+		<param name="job" value="selectIsd_eSE_SIM" />
+		<transition event="0" description="应用状态异常" to="finish" />
+		<transition event="1" description="下一步" to="31" />
+	</state>
+	<state id="31" name="initupdate命令" handler="com.whty.flow.statehandler.PersonalizeHandler">
+		<param name="job" value="initializeUpdate" />
+		<transition event="0" description="应用状态异常" to="finish" />
+		<transition event="1" description="下一步" to="32" />
+	</state>
+	<state id="32" name="外部认证"  handler="com.whty.flow.statehandler.PersonalizeHandler" >
+		<param name="job" value="externalAuthenticate" />
+		<transition event="0" description="数据有误" to="finish" />
+		<transition event="1" description="下一步" to="33" />
+	</state>
+	<state id="33" name="外部认证响应"  handler="com.whty.flow.statehandler.PersonalizeHandler">
+		<param name="job" value="responseApdu" />
+		<transition event="0" description="数据有误" to="finish" />
+		<transition event="1" description="下一步" to="34" />
+	</state>
+	<state id="34" name="应用实例重置" handler="com.whty.flow.statehandler.PersonalizeHandler">
+		<param name="job" value="appPrePersonalization" />
+		<transition event="0" description="异常结束" to="finish" />
+		<transition event="1" description="继续个人化" to="35" />
+	</state>
+	<state id="35" name="应用实例重置" handler="com.whty.flow.statehandler.CircleHandler">
+		<param name="job" value="appPersonalization" />
+		<transition event="0" description="异常结束" to="finish" />
+		<transition event="1" description="继续个人化" to="35" />
+		<transition event="3" description="最后的报文结束" to="finish" />
+	</state>
+	<state id="finish" name="结束">
+	</state>
+</flow>

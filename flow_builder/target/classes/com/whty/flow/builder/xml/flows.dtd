@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT flow (state+)>
+<!ATTLIST flow
+id CDATA #REQUIRED
+name CDATA #REQUIRED
+status CDATA #IMPLIED
+handler CDATA #IMPLIED
+error_handler CDATA #IMPLIED
+>
+
+<!ELEMENT state (param*,transition*)>
+<!ATTLIST state
+id CDATA #REQUIRED
+name CDATA #REQUIRED
+handler CDATA #IMPLIED
+suspand CDATA #IMPLIED
+> 
+
+<!ELEMENT transition EMPTY>
+<!ATTLIST transition
+event CDATA #REQUIRED
+to CDATA #REQUIRED
+flow CDATA #IMPLIED
+description CDATA #IMPLIED
+>
+
+<!ELEMENT param EMPTY>
+<!ATTLIST param
+name CDATA #REQUIRED
+value CDATA #REQUIRED
+description CDATA #IMPLIED
+>
