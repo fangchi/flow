@@ -11,7 +11,7 @@
 target/*
 
 .DS_Store
-classpath
+.classpath
 .project
 .settings/*
 
